@@ -16,9 +16,11 @@ class Article extends Model
     protected $fillable = [
         'title',
         'body',
-        'date',
         'user_id',
     ];
 
-    //AQUI: relacion con modelo User
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
+    }
 }
