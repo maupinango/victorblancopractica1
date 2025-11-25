@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <a href="#">Agregar</a>
+    <a href="{{ route('articles.create') }}">Agregar</a>
 
     <table>
         <thead>
@@ -18,7 +18,7 @@
                     <td>{{ $article->title }}</td>
                     <td>{{ $article->body }}</td>
                     <td>
-                        <a href="#">Ver</a>
+                        <a href="{{ route('articles.show', $article->id) }}">Ver</a>
                         <a href="#">Eliminar</a>
                     </td>
                 </tr>
